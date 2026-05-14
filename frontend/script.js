@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/health';
+const API_URL = 'https://YOUR-RENDER-URL.onrender.com/api/health';
 
 const form = document.getElementById('healthForm');
 const historyTable = document.getElementById('historyTable');
