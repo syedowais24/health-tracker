@@ -3,9 +3,6 @@
 
 <head>
 
-  <link rel="manifest" href="manifest.json">
-
-
   <meta charset="UTF-8" />
 
   <meta name="viewport"
@@ -35,10 +32,12 @@
   <link rel="stylesheet"
         href="style.css" />
 
-
 </head>
 
 <body>
+
+  <div class="bg1"></div>
+  <div class="bg2"></div>
 
   <div class="layout">
 
@@ -46,51 +45,55 @@
 
     <aside class="sidebar">
 
-      <div class="logo">
-        <div class="logo-circle">
-          <i class="fa-solid fa-heart-pulse"></i>
+      <div>
+
+        <div class="logo">
+
+          <div class="logo-circle">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+
+          <div>
+            <h2>Health</h2>
+            <span>Tracker</span>
+          </div>
+
         </div>
 
-        <div>
-          <h2>Health</h2>
-          <span>Tracker</span>
-        </div>
+        <!-- NAVIGATION -->
+
+        <nav>
+
+          <a href="#dashboardSection" class="active">
+            <i class="fa-solid fa-table-columns"></i>
+            Dashboard
+          </a>
+
+          <a href="#entrySection">
+            <i class="fa-solid fa-plus"></i>
+            Add Entry
+          </a>
+
+          <a href="#historySection">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            History
+          </a>
+
+        </nav>
+
       </div>
 
-      <nav>
-
-        <a class="active">
-          <i class="fa-solid fa-table-columns"></i>
-          Dashboard
-        </a>
-
-        <a>
-          <i class="fa-solid fa-plus"></i>
-          Add Entry
-        </a>
-
-        <a>
-          <i class="fa-solid fa-chart-line"></i>
-          Analytics
-        </a>
-
-        <a>
-          <i class="fa-solid fa-clock-rotate-left"></i>
-          History
-        </a>
-
-        <a>
-          <i class="fa-solid fa-gear"></i>
-          Settings
-        </a>
-
-      </nav>
+      <!-- STREAK CARD -->
 
       <div class="streak-card">
 
-        <h3>Keep Going 💪</h3>
+        <h3>
+          Keep Going 💪
+        </h3>
 
-        <p>You are doing great!</p>
+        <p>
+          Your wellness journey is improving every day.
+        </p>
 
         <div class="progress-bar">
           <div class="progress"></div>
@@ -100,203 +103,392 @@
 
     </aside>
 
-    <!-- MAIN -->
+
+    <!-- MAIN CONTENT -->
 
     <main class="main-content">
 
-      <!-- HEADER -->
+      <!-- TOPBAR -->
 
       <header class="topbar">
 
-  <div class="heading">
+        <div class="heading">
 
-    <h1>
-      HI Syed<span>.</span>
-    </h1>
+          <h1>
+            Hi Syed<span>.</span>
+          </h1>
 
-    <h2>
-      Dashboard
-    </h2>
+          <h2>
+            Dashboard
+          </h2>
 
-  </div>
+        </div>
 
-  <div class="profile">
+        <div class="profile">
 
-    <span id="todayDate"></span>
+          <span id="todayDate"></span>
 
-    <div class="avatar">
-      S
-    </div>
-
-  </div>
-
-</header>
-
-      <!-- STATS -->
-
-      <section class="stats-grid">
-
-        <div class="stat-card">
-
-          <div class="icon green">
-            <i class="fa-solid fa-shoe-prints"></i>
-          </div>
-
-          <div>
-            <h4>Steps</h4>
-            <h2 id="stepsCard">0</h2>
+          <div class="avatar">
+            S
           </div>
 
         </div>
 
-        <div class="stat-card">
+      </header>
 
-          <div class="icon blue">
-            <i class="fa-solid fa-droplet"></i>
+
+      <!-- DASHBOARD SECTION -->
+
+      <section id="dashboardSection">
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+
+            <div class="icon green">
+              <i class="fa-solid fa-shoe-prints"></i>
+            </div>
+
+            <div class="stat-info">
+              <span>Steps</span>
+              <h2 id="stepsCard">0</h2>
+            </div>
+
           </div>
 
-          <div>
-            <h4>Water</h4>
-            <h2 id="waterCard">0</h2>
+          <div class="stat-card">
+
+            <div class="icon blue">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div class="stat-info">
+              <span>Water</span>
+              <h2 id="waterCard">0</h2>
+            </div>
+
           </div>
 
-        </div>
+          <div class="stat-card">
 
-        <div class="stat-card">
+            <div class="icon purple">
+              <i class="fa-solid fa-moon"></i>
+            </div>
 
-          <div class="icon purple">
-            <i class="fa-solid fa-moon"></i>
+            <div class="stat-info">
+              <span>Sleep</span>
+              <h2 id="sleepCard">0</h2>
+            </div>
+
           </div>
 
-          <div>
-            <h4>Sleep</h4>
-            <h2 id="sleepCard">0</h2>
+          <div class="stat-card">
+
+            <div class="icon orange">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+
+            <div class="stat-info">
+              <span>Calories</span>
+              <h2 id="calorieCard">0</h2>
+            </div>
+
           </div>
 
-        </div>
+          <div class="stat-card">
 
-        <div class="stat-card">
+            <div class="icon pink">
+              <i class="fa-regular fa-face-smile"></i>
+            </div>
 
-          <div class="icon orange">
-            <i class="fa-solid fa-fire"></i>
-          </div>
+            <div class="stat-info">
+              <span>Mood</span>
+              <h2 id="moodCard">🙂</h2>
+            </div>
 
-          <div>
-            <h4>Calories</h4>
-            <h2 id="calorieCard">0</h2>
-          </div>
-
-        </div>
-
-        <div class="stat-card">
-
-          <div class="icon pink">
-            <i class="fa-regular fa-face-smile"></i>
-          </div>
-
-          <div>
-            <h4>Mood</h4>
-            <h2 id="moodCard">😊</h2>
           </div>
 
         </div>
 
       </section>
+
+
+      <!-- INSIGHT CARD -->
+
+      <div class="insight-card">
+
+        <h3>
+          Today's Insight
+        </h3>
+
+        <p>
+          You're maintaining a healthy routine. Sleep and hydration levels are balanced today. Keep your consistency going.
+        </p>
+
+      </div>
+
+
+      <!-- ANALYTICS -->
+
+      <div class="analytics-grid">
+
+        <!-- SLEEP -->
+
+        <div class="analytics-card">
+
+          <div class="analytics-top">
+
+            <span>Sleep Goal</span>
+
+            <h2>8 hrs</h2>
+
+          </div>
+
+          <div class="progress-circle">
+
+            <div class="circle-value">
+              82%
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- HYDRATION -->
+
+        <div class="analytics-card">
+
+          <div class="analytics-top">
+
+            <span>Hydration</span>
+
+            <h2>6 / 8</h2>
+
+          </div>
+
+          <div class="mini-bars">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+          </div>
+
+        </div>
+
+
+        <!-- HEALTH SCORE -->
+
+        <div class="analytics-card dark">
+
+          <span>Health Score</span>
+
+          <h1>84%</h1>
+
+          <p>
+            Great consistency this week.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUICK ACTIONS -->
+
+      <div class="quick-actions">
+
+        <button class="quick-btn">
+          <i class="fa-solid fa-heart-pulse"></i>
+          Wellness
+        </button>
+
+        <button class="quick-btn">
+          <i class="fa-solid fa-dumbbell"></i>
+          Workout
+        </button>
+
+        <button class="quick-btn">
+          <i class="fa-solid fa-glass-water"></i>
+          Hydration
+        </button>
+
+        <button class="quick-btn">
+          <i class="fa-solid fa-moon"></i>
+          Sleep
+        </button>
+
+      </div>
+
+
+      <!-- DAILY SUMMARY -->
+
+      <div class="daily-summary">
+
+        <div class="summary-left">
+
+          <span>Daily Progress</span>
+
+          <h1>
+            Stay Consistent
+          </h1>
+
+          <p>
+            Your activity levels are improving steadily. Keep tracking your sleep, hydration, and daily movement.
+          </p>
+
+        </div>
+
+        <div class="summary-right">
+
+          <div class="summary-stat">
+
+            <h2>10k</h2>
+
+            <span>Steps Goal</span>
+
+          </div>
+
+          <div class="summary-stat">
+
+            <h2>8h</h2>
+
+            <span>Sleep Goal</span>
+
+          </div>
+
+          <div class="summary-stat">
+
+            <h2>2L</h2>
+
+            <span>Water Goal</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
 
       <!-- MAIN GRID -->
 
-      <section class="dashboard-grid">
+      <div class="dashboard-grid">
 
-        <!-- FORM -->
+        <!-- ENTRY SECTION -->
 
-        <div class="card">
+        <section id="entrySection">
 
-          <div class="card-header">
-            <h2>Add Daily Entry</h2>
-          </div>
+          <div class="card">
 
-          <form id="healthForm">
-
-            <input type="date" id="date" required>
-
-            <div class="two-grid">
-
-              <input type="number" id="weight" placeholder="Weight (kg)" required>
-
-              <input type="number" id="steps" placeholder="Steps">
-
+            <div class="card-header">
+              <h2>Add Daily Entry</h2>
             </div>
 
-            <div class="two-grid">
+            <form id="healthForm">
 
-              <input type="number" id="water" placeholder="Water Intake">
+              <input type="date" id="date">
 
-              <input type="number" id="sleep" placeholder="Sleep Hours">
+              <div class="two-grid">
 
-            </div>
+                <input type="number"
+                       id="weight"
+                       placeholder="Weight (kg)">
 
-            <div class="two-grid">
+                <input type="number"
+                       id="steps"
+                       placeholder="Steps">
 
-              <input type="number" id="calories" placeholder="Calories">
+              </div>
 
-              <input type="text" id="mood" placeholder="Mood">
+              <div class="two-grid">
 
-            </div>
+                <input type="number"
+                       id="water"
+                       placeholder="Water Intake">
 
-            <textarea id="notes" placeholder="How are you feeling today?"></textarea>
+                <input type="number"
+                       id="sleep"
+                       placeholder="Sleep Hours">
 
-            <button type="submit">
-              <i class="fa-solid fa-floppy-disk"></i>
-              Save Entry
-            </button>
+              </div>
 
-          </form>
+              <div class="two-grid">
 
-        </div>
+                <input type="number"
+                       id="calories"
+                       placeholder="Calories">
 
-        <!-- HISTORY -->
+                <input type="text"
+                       id="mood"
+                       placeholder="Mood">
 
-        <div class="card">
+              </div>
 
-          <div class="card-header">
+              <textarea id="notes"
+                        placeholder="Notes"></textarea>
 
-            <h2>Recent History</h2>
+              <button type="submit">
+                Save Entry
+              </button>
 
-          </div>
-
-          <div class="table-container">
-
-            <table>
-
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Weight</th>
-                  <th>Steps</th>
-                  <th>Water</th>
-                  <th>Sleep</th>
-                  <th>Calories</th>
-                  <th>Mood</th>
-                </tr>
-              </thead>
-
-              <tbody id="historyTable"></tbody>
-
-            </table>
+            </form>
 
           </div>
 
-        </div>
+        </section>
 
-      </section>
+
+        <!-- HISTORY SECTION -->
+
+        <section id="historySection">
+
+          <div class="card">
+
+            <div class="card-header">
+              <h2>Recent History</h2>
+            </div>
+
+            <div class="table-container">
+
+              <table>
+
+                <thead>
+
+                  <tr>
+                    <th>Date</th>
+                    <th>Weight</th>
+                    <th>Steps</th>
+                    <th>Water</th>
+                    <th>Sleep</th>
+                    <th>Calories</th>
+                    <th>Mood</th>
+                  </tr>
+
+                </thead>
+
+                <tbody id="historyTable">
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
 
     </main>
 
   </div>
 
   <script src="script.js"></script>
-  <div class="bg1"></div>
-  <div class="bg2"></div>
 
 </body>
 
