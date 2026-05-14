@@ -1,4 +1,4 @@
-const API_URL = 'https://YOUR-RENDER-URL.onrender.com/api/health';
+const API_URL ='https://health-tracker-ykxw.onrender.com/api/health';
 
 const form = document.getElementById('healthForm');
 const historyTable = document.getElementById('historyTable');
