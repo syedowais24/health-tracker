@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="manifest" href="manifest.json">
+
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+  <title>Health Tracker</title>
+
+  <!-- FONT -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+  <!-- ICONS -->
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
+
+  <link rel="stylesheet"
+        href="style.css" />
+
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="logo-circle">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <div>
+          <h2>Health</h2>
+          <span>Tracker</span>
+        </div>
+      </div>
+
+      <nav>
+
+        <a class="active">
+          <i class="fa-solid fa-table-columns"></i>
+          Dashboard
+        </a>
+
+        <a>
+          <i class="fa-solid fa-plus"></i>
+          Add Entry
+        </a>
+
+        <a>
+          <i class="fa-solid fa-chart-line"></i>
+          Analytics
+        </a>
+
+        <a>
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          History
+        </a>
+
+        <a>
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </a>
+
+      </nav>
+
+      <div class="streak-card">
+
+        <h3>Keep Going 💪</h3>
+
+        <p>You are doing great!</p>
+
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+      <!-- HEADER -->
+
+      <header class="topbar">
+
+  <div class="heading">
+
+    <h1>
+      HI Syed<span>.</span>
+    </h1>
+
+    <h2>
+      Dashboard
+    </h2>
+
+  </div>
+
+  <div class="profile">
+
+    <span id="todayDate"></span>
+
+    <div class="avatar">
+      S
+    </div>
+
+  </div>
+
+</header>
+
+      <!-- STATS -->
+
+      <section class="stats-grid">
+
+        <div class="stat-card">
+
+          <div class="icon green">
+            <i class="fa-solid fa-shoe-prints"></i>
+          </div>
+
+          <div>
+            <h4>Steps</h4>
+            <h2 id="stepsCard">0</h2>
+          </div>
+
+        </div>
+
+        <div class="stat-card">
+
+          <div class="icon blue">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+
+          <div>
+            <h4>Water</h4>
+            <h2 id="waterCard">0</h2>
+          </div>
+
+        </div>
+
+        <div class="stat-card">
+
+          <div class="icon purple">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+
+          <div>
+            <h4>Sleep</h4>
+            <h2 id="sleepCard">0</h2>
+          </div>
+
+        </div>
+
+        <div class="stat-card">
+
+          <div class="icon orange">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+
+          <div>
+            <h4>Calories</h4>
+            <h2 id="calorieCard">0</h2>
+          </div>
+
+        </div>
+
+        <div class="stat-card">
+
+          <div class="icon pink">
+            <i class="fa-regular fa-face-smile"></i>
+          </div>
+
+          <div>
+            <h4>Mood</h4>
+            <h2 id="moodCard">😊</h2>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- MAIN GRID -->
+
+      <section class="dashboard-grid">
+
+        <!-- FORM -->
+
+        <div class="card">
+
+          <div class="card-header">
+            <h2>Add Daily Entry</h2>
+          </div>
+
+          <form id="healthForm">
+
+            <input type="date" id="date" required>
+
+            <div class="two-grid">
+
+              <input type="number" id="weight" placeholder="Weight (kg)" required>
+
+              <input type="number" id="steps" placeholder="Steps">
+
+            </div>
+
+            <div class="two-grid">
+
+              <input type="number" id="water" placeholder="Water Intake">
+
+              <input type="number" id="sleep" placeholder="Sleep Hours">
+
+            </div>
+
+            <div class="two-grid">
+
+              <input type="number" id="calories" placeholder="Calories">
+
+              <input type="text" id="mood" placeholder="Mood">
+
+            </div>
+
+            <textarea id="notes" placeholder="How are you feeling today?"></textarea>
+
+            <button type="submit">
+              <i class="fa-solid fa-floppy-disk"></i>
+              Save Entry
+            </button>
+
+          </form>
+
+        </div>
+
+        <!-- HISTORY -->
+
+        <div class="card">
+
+          <div class="card-header">
+
+            <h2>Recent History</h2>
+
+          </div>
+
+          <div class="table-container">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Weight</th>
+                  <th>Steps</th>
+                  <th>Water</th>
+                  <th>Sleep</th>
+                  <th>Calories</th>
+                  <th>Mood</th>
+                </tr>
+              </thead>
+
+              <tbody id="historyTable"></tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+  <div class="bg1"></div>
+  <div class="bg2"></div>
+
+</body>
+
+</html>
